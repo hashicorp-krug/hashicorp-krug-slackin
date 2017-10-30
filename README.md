@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/hashicorpkrug" title="HashiCorp KRUG">
-    <img alt="HashiCorp KRUG" src="https://github.com/HashiCorpKRUG/i/raw/master/logo.png" width="420px" />
+    <img alt="HashiCorp KRUG" src="https://github.com/HashiCorpKRUG/i/raw/master/logo.png" width="640px" />
   </a>
   <br />
   <h1>HashiCorp KRUG Slackin</h1>
