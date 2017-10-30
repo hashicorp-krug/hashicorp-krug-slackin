@@ -3,7 +3,7 @@
 'use strict';
 
 const dotenv = require('dotenv');
-const slackin = require('slackin')
+const slackin = require('slackin');
 
 
 // Load environment variables from .env file
@@ -13,12 +13,12 @@ const port = process.env.SLACKIN_PORT || 5555;
 const token = process.env.SLACKIN_TOKEN || '';
 
 const app = slackin.default({
-    org: 'hashicorpkr',
-    token: token,
-    path: '/',
-    interval: 1000,
-    channels: '',
-    silent: false
+  org: 'hashicorpkr',
+  token: token,
+  path: '/',
+  interval: 1000,
+  channels: '',
+  silent: false
 });
 
 // Start server
