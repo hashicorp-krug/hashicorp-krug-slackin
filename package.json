@@ -1,0 +1,39 @@
+{
+  "name": "hashicorp-krug-slackin",
+  "version": "1.0.0",
+  "description": "Web application to inivite people to HashiCorp Korea User Group Slack",
+  "license": "MIT",
+  "author": "",
+  "contributors": [],
+  "homepage": "https://github.com/hashicorpkrug/hashicorp-krug-slackin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashicorpkrug/hashicorp-krug-slackin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hashicorpkrug/hashicorp-krug-slackin/issues"
+  },
+  "keywords": [
+    "slackin",
+    "slack",
+    "slack-invitation",
+    "hashicorp",
+    "hashicorpkrug",
+    "hashicorp-usergroup",
+    "korea"
+  ],
+  "main": "app.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "app.js"
+  ],
+  "scripts": {
+    "lint": "eslint app.js"
+  },
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "slackin": "^0.13.0"
+  }
+}
