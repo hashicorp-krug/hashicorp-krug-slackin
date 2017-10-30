@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "dotenv": "^4.0.0",
+    "pm2": "^2.7.2",
     "slackin": "^0.13.0"
   },
   "devDependencies": {
