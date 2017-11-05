@@ -11,9 +11,6 @@
 </p>
 
 <div align="center">
-  <a href="https://circleci.com/gh/hashicorpkrug/hashicorp-krug-slackin">
-    <img alt="CircleCI" src="https://circleci.com/gh/hashicorpkrug/hashicorp-krug-slackin.svg?style=shield" />
-  </a>
   <a href="https://opensource.org/licenses/mit-license.php">
     <img alt="MIT License" src="https://badges.frapsoft.com/os/mit/mit.svg?v=103" />
   </a>
@@ -27,10 +24,7 @@
 ## Usage
 
 ```bash
-$ git clone https://github.com/hashicorpkrug/hashicorp-krug-slackin
-$ cd hashicorp-krug-slackin
-$ yarn
-$ yarn start
+$ docker run -d -p 3000:3000 --env-file=.env -it hashicorpkrug/slack-invite-web
 ```
 
 

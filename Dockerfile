@@ -4,7 +4,7 @@
 # build:
 #   docker build --force-rm -t hashicorpkrug/slack-invite-web .
 # run:
-#   docker run --env-file=path/to/.env --name slack-invite-web -d -p 80:5555 -it hashicorpkrug/slcak-invite-web
+#   docker run --env-file=path/to/.env --name slack-invite-web -d -p 80:3000 -it hashicorpkrug/slack-invite-web
 #
 
 ### RELEASE
