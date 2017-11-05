@@ -1,48 +1,17 @@
 #
-# HASHICORP KRUG SLACKIN
+# SLACK INVITE WEB
 #
 # build:
-#   docker build --force-rm -t hashicorpkrug/slackin .
+#   docker build --force-rm -t hashicorpkrug/slack-invite-web .
 # run:
-#   docker run --env-file=path/to/.env --name hashicorp-krug-slackin -d -p 80:5555 -it hashicorpkrug/slackin
+#   docker run --env-file=path/to/.env --name slack-invite-web -d -p 80:5555 -it hashicorpkrug/slcak-invite-web
 #
-#
-
-### BASE
-FROM node:8.8.1-alpine AS base
-# Set the working directory
-WORKDIR /app
-# Copy project specification and dependencies lock files
-COPY package.json yarn.lock ./
-# Install yarn
-RUN apk --no-cache add yarn
-
-
-### DEPENDENCIES
-FROM base AS dependencies
-# Install Node.js dependencies (only production)
-RUN yarn --production
-# Copy production dependencies aside
-RUN cp -R node_modules /tmp/node_modules
-# Install ALL Node.js dependencies
-RUN yarn
-
-
-### TEST
-FROM dependencies AS test
-# Copy app sources
-COPY . .
-# Run linters
-RUN yarn lint
-
 
 ### RELEASE
-FROM base AS release
-# Copy production dependencies
-COPY --from=dependencies /tmp/node_modules ./node_modules
-# Copy app sources
-COPY . .
+FROM node:8.9-alpine
+# Install slackin
+RUN npm install --global slackin
 # Expose application port
-EXPOSE 5555
+EXPOSE 3000
 # Run
-CMD ["yarn", "run", "pm2-docker", "--", "--env", "production", "process.json"]
+CMD slackin -p 3000 $SLACK_ORG

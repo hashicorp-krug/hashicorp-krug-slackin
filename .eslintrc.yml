@@ -1,5 +1,0 @@
-extends:
-  - "omnious"
-
-parserOptions:
-  sourceType: 'script'

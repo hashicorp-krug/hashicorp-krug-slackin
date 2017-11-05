@@ -1,8 +1,0 @@
-{
-  "apps": [{
-    "name": "hashicorp-krug-slackin",
-    "script": "app.js",
-    "instances": "1",
-    "watch": true
-  }]
-}
